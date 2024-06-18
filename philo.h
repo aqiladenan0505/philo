@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.c                                            :+:      :+:    :+:   */
+/*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/28 12:12:14 by aadenan           #+#    #+#             */
-/*   Updated: 2024/06/18 14:54:24 by aadenan          ###   ########.fr       */
+/*   Created: 2024/06/18 14:48:39 by aadenan           #+#    #+#             */
+/*   Updated: 2024/06/18 14:52:24 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+// LIBFT IS NOT AUTHORIZED
 
-int	main(int argc, char **argv)
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <pthread.h>
+#include <sys/time.h>
+// #include <sys/types.h> // To check again
+// #include <sys/wait.h> // To check again
+
+typedef struct s_data
 {
-	if (argc == 5 || argc == 6)
-	{
-		parse_input(argv);
-		// data_init();
-		// execute_philo();
-		// free_all();
-	}
-	else
-	{
-		// output_error();
-	}
-	return (0);
-}
+	// TO DO
+} t_data
+
