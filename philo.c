@@ -6,8 +6,24 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 12:12:14 by aadenan           #+#    #+#             */
-/*   Updated: 2024/05/28 12:12:29 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/06/18 13:59:03 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int main()
+//#include "philo.h"
+
+int	main(int argc, char **argv)
+{
+	if (argc == 5 || argc == 6)
+	{
+		//parse_input();
+		//data_init();
+		//execute_philo();
+		//free_all();
+	}
+	else
+	{
+		//output_error();
+	}
+	return (0);
+}
