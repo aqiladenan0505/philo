@@ -6,11 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 12:12:14 by aadenan           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2024/06/20 14:43:30 by aadenan          ###   ########.fr       */
-=======
-/*   Updated: 2024/06/18 14:54:24 by aadenan          ###   ########.fr       */
->>>>>>> 316c3a0 (Added header file)
+/*   Updated: 2024/06/26 17:50:59 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +14,6 @@
 
 int	main(int argc, char **argv)
 {
-<<<<<<< HEAD
 	t_data	data;
 	if (argc == 5 || argc == 6)
 	{
@@ -30,21 +25,17 @@ int	main(int argc, char **argv)
 		printf("time_to_eat: %d\n", data.time_to_eat);
 		printf("time_to_sleep: %d\n", data.time_to_sleep);
 		printf("meals_nbr: %d\n", data.meals_nbr);
-=======
 	if (argc == 5 || argc == 6)
 	{
 		parse_input(argv);
->>>>>>> 316c3a0 (Added header file)
+		printf("Input is correct\n");
 		// data_init();
 		// execute_philo();
 		// free_all();
 	}
 	else
 	{
-<<<<<<< HEAD
 		printf("Wrong number of arguments\n");
-=======
->>>>>>> 316c3a0 (Added header file)
 		// output_error();
 	}
 	return (0);
