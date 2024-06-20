@@ -6,11 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:48:39 by aadenan           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2024/06/20 14:09:21 by aadenan          ###   ########.fr       */
-=======
-/*   Updated: 2024/06/18 14:52:24 by aadenan          ###   ########.fr       */
->>>>>>> 316c3a0 (Added header file)
+/*   Updated: 2024/06/26 18:42:12 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +15,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
-<<<<<<< HEAD
 #include <limits.h>
-=======
->>>>>>> 316c3a0 (Added header file)
 #include <pthread.h>
 #include <sys/time.h>
 // #include <sys/types.h> // To check again
@@ -30,7 +23,6 @@
 
 typedef struct s_data
 {
-<<<<<<< HEAD
 	int	philo_nbr;
 	int	time_to_eat;
 	int	time_to_sleep;
@@ -39,8 +31,4 @@ typedef struct s_data
 } t_data;
 
 int	parse_input(t_data *data, char **argv);
-=======
-	// TO DO
-} t_data
 
->>>>>>> 316c3a0 (Added header file)
