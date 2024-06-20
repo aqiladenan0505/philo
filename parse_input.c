@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:04:38 by aadenan           #+#    #+#             */
-/*   Updated: 2024/06/20 11:38:01 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/06/20 15:19:48 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	ft_isnum(char *str)
 	i = 0;
 	while(str[i] != '\0')
 	{
-		if (!(i >= '48' && i <= '57'))
+		if (!(str[i] >= 48 && str[i] <= 57))
 		{
 			printf("Input contains non-number\n");
 			return (1);
@@ -45,6 +45,7 @@ static int	ft_intmax(char *str)
 		printf("Number len is bigger than 10\n");
 		return (1);
 	}
+	i = 0;
 	while (str[i] != '\0')
 	{
 		nbr = (nbr * 10) + (str[i] - '0');
@@ -65,13 +66,11 @@ static int	check_valid(char **argv)
 	i = 1;
 	while (argv[i] != NULL)
 	{
-		printf("Checking input %d\n", i);
 		if (ft_isnum(argv[i]) == 1 || ft_intmax(argv[i]) == 1)
 		{
-			printf("Input %d is invalid.\n", i);
+			printf("Index %d is invalid.\n", i);
 			return (1);
 		}
-		printf("Input %d is valid.\n", i);
 		i++;
 	}
 	return (0);
