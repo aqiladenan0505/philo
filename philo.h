@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:48:39 by aadenan           #+#    #+#             */
-/*   Updated: 2024/06/20 11:48:21 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/06/20 14:09:21 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <limits.h>
 #include <pthread.h>
 #include <sys/time.h>
 // #include <sys/types.h> // To check again
@@ -27,5 +28,6 @@ typedef struct s_data
 	int	time_to_sleep;
 	int	time_to_die;
 	int	meals_nbr;
-} t_data
+} t_data;
 
+int	parse_input(t_data *data, char **argv);
