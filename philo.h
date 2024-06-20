@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:48:39 by aadenan           #+#    #+#             */
-/*   Updated: 2024/06/18 14:52:24 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/06/20 11:48:21 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@
 
 typedef struct s_data
 {
-	// TO DO
+	int	philo_nbr;
+	int	time_to_eat;
+	int	time_to_sleep;
+	int	time_to_die;
+	int	meals_nbr;
 } t_data
 
