@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 12:12:14 by aadenan           #+#    #+#             */
-/*   Updated: 2024/06/20 11:46:25 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/06/20 14:43:30 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int	main(int argc, char **argv)
 	t_data	data;
 	if (argc == 5 || argc == 6)
 	{
-		if (parse_input(argv) == 1)
+		if (parse_input(&data, argv) == 1)
 			return (0);
-		printf("Input is correct\n");
+		printf("All input is valid\n");
 		printf("philo_nbr: %d\n", data.philo_nbr);
 		printf("time_to_die: %d\n", data.time_to_die);
 		printf("time_to_eat: %d\n", data.time_to_eat);
