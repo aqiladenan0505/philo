@@ -6,11 +6,8 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:04:38 by aadenan           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2024/06/20 15:19:48 by aadenan          ###   ########.fr       */
-=======
+/*   Updated: 2024/06/20 16:13:59 by aadenan          ###   ########.fr       */
 /*   Updated: 2024/06/20 11:38:01 by aadenan          ###   ########.fr       */
->>>>>>> c0fa3b9 (Norminetted parse file)
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +19,9 @@ static int	ft_isnum(char *str)
 	int	i;
 
 	i = 0;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
-<<<<<<< HEAD
 		if (!(str[i] >= 48 && str[i] <= 57))
-=======
-		if (!(i >= '48' && i <= '57'))
->>>>>>> c0fa3b9 (Norminetted parse file)
 		{
 			printf("Input contains non-number\n");
 			return (1);
@@ -41,7 +34,7 @@ static int	ft_isnum(char *str)
 // This function ensure input is not beyond int max
 static int	ft_intmax(char *str)
 {
-	int	i;
+	int		i;
 	long	nbr;
 
 	i = 0;
@@ -53,10 +46,7 @@ static int	ft_intmax(char *str)
 		printf("Number len is bigger than 10\n");
 		return (1);
 	}
-<<<<<<< HEAD
 	i = 0;
-=======
->>>>>>> c0fa3b9 (Norminetted parse file)
 	while (str[i] != '\0')
 	{
 		nbr = (nbr * 10) + (str[i] - '0');
@@ -69,6 +59,7 @@ static int	ft_intmax(char *str)
 	}
 	return (0);
 }
+
 // This function validate all the numbers in argv
 static int	check_valid(char **argv)
 {
@@ -77,24 +68,29 @@ static int	check_valid(char **argv)
 	i = 1;
 	while (argv[i] != NULL)
 	{
-<<<<<<< HEAD
 		if (ft_isnum(argv[i]) == 1 || ft_intmax(argv[i]) == 1)
 		{
 			printf("Index %d is invalid.\n", i);
 			return (1);
 		}
-=======
-		printf("Checking input %d\n", i);
-		if (ft_isnum(argv[i]) == 1 || ft_intmax(argv[i]) == 1)
-		{
-			printf("Input %d is invalid.\n", i);
-			return (1);
-		}
-		printf("Input %d is valid.\n", i);
->>>>>>> c0fa3b9 (Norminetted parse file)
 		i++;
 	}
 	return (0);
+}
+
+static int	ft_atoi(char *str)
+{
+	int	nbr;
+	int	i;
+
+	i = 0;
+	nbr = 0;
+	while (str[i] != '\0')
+	{
+		nbr = (nbr * 10) + (str[i] - '0');
+		i++;
+	}
+	return (nbr);
 }
 
 // This function parse input
