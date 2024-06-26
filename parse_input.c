@@ -6,12 +6,27 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:04:38 by aadenan           #+#    #+#             */
-/*   Updated: 2024/06/26 18:48:17 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/06/26 19:13:40 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
+// Fix ft_atoi
+static int	ft_atoi(char *str)
+{
+	int	i;
+	int	nbr;
+
+	i = 0;
+	nbr = 0;
+	while (str[i] != '\0')
+	{
+		nbr = (nbr * i) + (str[i] - '0');
+		i++;
+	}
+	return (nbr);
+}
 // This function scans for non-number
 static int	ft_isnum(char *str)
 {
@@ -21,7 +36,6 @@ static int	ft_isnum(char *str)
 	while(str[i] != '\0')
 	{
 		if (!(str[i] >= 48 && str[i] <= 57))
-		if (!(i >= '48' && i <= '57'))
 		{
 			printf("Input contains non-number\n");
 			return (1);
