@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 12:12:14 by aadenan           #+#    #+#             */
-/*   Updated: 2024/06/26 18:41:27 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/06/26 18:45:07 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int	main(int argc, char **argv)
 		printf("time_to_sleep: %d\n", data.time_to_sleep);
 		printf("meals_nbr: %d\n", data.meals_nbr);
 		// data_init();
+		if (create_malloc(&data) == 1)
+			return (1);
 		// execute_philo();
 		// free_all();
 	}
