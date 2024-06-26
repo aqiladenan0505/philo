@@ -6,11 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:04:38 by aadenan           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2024/06/20 15:19:48 by aadenan          ###   ########.fr       */
-=======
-/*   Updated: 2024/06/20 11:38:01 by aadenan          ###   ########.fr       */
->>>>>>> c0fa3b9 (Norminetted parse file)
+/*   Updated: 2024/06/26 18:48:17 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +20,8 @@ static int	ft_isnum(char *str)
 	i = 0;
 	while(str[i] != '\0')
 	{
-<<<<<<< HEAD
 		if (!(str[i] >= 48 && str[i] <= 57))
-=======
 		if (!(i >= '48' && i <= '57'))
->>>>>>> c0fa3b9 (Norminetted parse file)
 		{
 			printf("Input contains non-number\n");
 			return (1);
@@ -53,10 +46,7 @@ static int	ft_intmax(char *str)
 		printf("Number len is bigger than 10\n");
 		return (1);
 	}
-<<<<<<< HEAD
 	i = 0;
-=======
->>>>>>> c0fa3b9 (Norminetted parse file)
 	while (str[i] != '\0')
 	{
 		nbr = (nbr * 10) + (str[i] - '0');
@@ -77,13 +67,11 @@ static int	check_valid(char **argv)
 	i = 1;
 	while (argv[i] != NULL)
 	{
-<<<<<<< HEAD
 		if (ft_isnum(argv[i]) == 1 || ft_intmax(argv[i]) == 1)
 		{
 			printf("Index %d is invalid.\n", i);
 			return (1);
 		}
-=======
 		printf("Checking input %d\n", i);
 		if (ft_isnum(argv[i]) == 1 || ft_intmax(argv[i]) == 1)
 		{
@@ -91,7 +79,6 @@ static int	check_valid(char **argv)
 			return (1);
 		}
 		printf("Input %d is valid.\n", i);
->>>>>>> c0fa3b9 (Norminetted parse file)
 		i++;
 	}
 	return (0);
