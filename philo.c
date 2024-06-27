@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 12:12:14 by aadenan           #+#    #+#             */
-/*   Updated: 2024/06/26 18:54:12 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/06/27 17:49:12 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ int	main(int argc, char **argv)
 		printf("time_to_eat: %d\n", data.time_to_eat);
 		printf("time_to_sleep: %d\n", data.time_to_sleep);
 		printf("meals_nbr: %d\n", data.meals_nbr);
-		// data_init();
-		if (create_malloc(&data) == 1)
+		printf(GREEN "---------- parse_input done ----------\n" RESET);
+		if (data_init(&data) == 1)
 			return (1);
-		// execute_philo();
-		// free_all();
+		printf(GREEN "---------- data_init done ----------\n" RESET);
+		// free_all(&data);
 	}
 	else
 	{

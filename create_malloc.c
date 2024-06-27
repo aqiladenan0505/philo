@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 18:40:18 by aadenan           #+#    #+#             */
-/*   Updated: 2024/06/26 17:32:13 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/06/27 17:06:42 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,5 @@ int	create_malloc(t_data *data)
 		return (1);
 	}
 	printf("data->philo_data was malloc-ed\n");
-	data->stop_flag = 1;
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:04:38 by aadenan           #+#    #+#             */
-/*   Updated: 2024/06/26 19:13:40 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/06/27 17:36:02 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	ft_atoi(char *str)
 	nbr = 0;
 	while (str[i] != '\0')
 	{
-		nbr = (nbr * i) + (str[i] - '0');
+		nbr = (nbr * 10) + (str[i] - '0');
 		i++;
 	}
 	return (nbr);
