@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 16:56:46 by aadenan           #+#    #+#             */
-/*   Updated: 2024/06/27 17:31:04 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/06/27 18:53:16 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	data_init(t_data *data)
 		printf("Mutex error\n");
 		return (1);
 	}
-	// create_philo(data);
+	create_philo(data);
 	data->stop_flag = 1;
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:48:39 by aadenan           #+#    #+#             */
-/*   Updated: 2024/06/27 17:39:30 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/06/27 18:54:32 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,5 @@ int	parse_input(t_data *data, char **argv);
 int	data_init(t_data *data);
 int	create_malloc(t_data *node);
 int	create_lock(t_data *data);
+void	create_philo(t_data *data);
 void	ft_free(t_data **data);
