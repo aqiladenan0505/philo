@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 18:46:17 by aadenan           #+#    #+#             */
-/*   Updated: 2024/07/01 14:30:47 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/07/01 15:05:31 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	create_philo(t_data *data)
 		data->philo_data[i].left_fork = i;
 		data->philo_data[i].right_fork = (i + 1) % data->philo_nbr;
 		data->philo_data[i].meals_eaten = 0;
-		//data->philo_data[i].last_meal_time = get_current_time();
+		data->philo_data[i].last_meal_time = get_current_time();
 		data->philo_data[i].time_to_die = data->time_to_die;
 		data->philo_data[i].time_to_eat = data->time_to_eat;
 		data->philo_data[i].time_to_sleep = data->time_to_sleep;
@@ -75,6 +75,7 @@ void	create_philo(t_data *data)
 		printf("philo id: %d\n", data->philo_data[i].id);
 		printf("left_fork: %d\n", data->philo_data[i].left_fork);
 		printf("right fork: %d\n", data->philo_data[i].right_fork);
+		printf("last_meal_time: %ld\n", data->philo_data[i].last_meal_time);
 		i++;
 	}
 

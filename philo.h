@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:48:39 by aadenan           #+#    #+#             */
-/*   Updated: 2024/07/01 14:43:30 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/07/01 15:07:08 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ typedef struct s_philo
 	int		meals_eaten;
 	int		meals_nbr;
 	int		stop_flag;
+	long		last_meal_time;
 	long		time_to_die;
 	long		time_to_eat;
 	long		time_to_sleep;
@@ -70,5 +71,6 @@ int	parse_input(t_data *data, char **argv);
 int	data_init(t_data *data);
 int	create_malloc(t_data *node);
 int	create_lock(t_data *data);
+long	get_current_time(void);
 void	create_philo(t_data *data);
 void	ft_free(t_data **data);
