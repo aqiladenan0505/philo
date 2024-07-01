@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:48:39 by aadenan           #+#    #+#             */
-/*   Updated: 2024/06/27 18:54:32 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/07/01 14:25:34 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,21 @@
 
 typedef struct s_philo
 {
-	int	temp;
+	int		id;
+	int		left_fork;
+	int		right_fork;
+	int		meals_eaten;
+	int		meals_nbr;
+	int		stop_flag;
+	long		time_to_die;
+	long		time_to_eat;
+	long		time_to_sleep;
+	pthread_mutex_t	*forks;
+	pthread_mutex_t	*print_mutex;
+	pthread_mutex_t	*meal_time_mutex;
+	pthread_mutex_t	*stop_mutex;
+
+
 }	t_philo;
 
 typedef struct s_data

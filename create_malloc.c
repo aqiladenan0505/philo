@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 18:40:18 by aadenan           #+#    #+#             */
-/*   Updated: 2024/06/27 17:06:42 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/07/01 14:33:39 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	create_malloc(t_data *data)
 {
+	printf(YELLOW "---- create_malloc init ----\n" RESET);
 	data->philo = malloc(sizeof(pthread_t) * data->philo_nbr);
 	if (data->philo == NULL)
 		return (1);

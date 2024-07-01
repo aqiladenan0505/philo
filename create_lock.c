@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 18:42:41 by aadenan           #+#    #+#             */
-/*   Updated: 2024/06/27 17:31:18 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/07/01 14:34:17 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ static int	init_forks_mutex(t_data *data)
 
 int	create_lock(t_data *data)
 {
+	printf(YELLOW "---- create_lock init ----\n" RESET);
 	if (init_print_mutex(data) != 0)
 		return (1);
 	if (init_meal_time_mutex(data) != 0)
