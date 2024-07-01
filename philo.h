@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:48:39 by aadenan           #+#    #+#             */
-/*   Updated: 2024/07/01 15:07:08 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/07/01 15:15:57 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,4 @@ int	create_malloc(t_data *node);
 int	create_lock(t_data *data);
 long	get_current_time(void);
 void	create_philo(t_data *data);
-void	ft_free(t_data **data);
+void	free_all(t_data *data);

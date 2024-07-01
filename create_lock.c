@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 18:42:41 by aadenan           #+#    #+#             */
-/*   Updated: 2024/07/01 14:34:17 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/07/01 15:16:50 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	init_print_mutex(t_data *data)
 	if (pthread_mutex_init(&data->print_mutex, NULL) != 0)
 	{
 		printf("print_mutex init failed\n");
-		ft_free(&data);
+		free_all(data);
 		return (1);
 	}
 	printf("print_mutex init\n");
@@ -29,7 +29,7 @@ static int	init_meal_time_mutex(t_data *data)
 	if (pthread_mutex_init(&data->meal_time_mutex, NULL) != 0)
 	{
 		printf("meal_time_mutex init failed\n");
-		ft_free(&data);
+		free_all(data);
 		pthread_mutex_destroy(&data->print_mutex);
 		return (1);
 	}
@@ -42,7 +42,7 @@ static int	init_stop_mutex(t_data *data)
 	if (pthread_mutex_init(&data->stop_mutex, NULL) != 0)
 	{
 		printf("stop_mutex init failed\n");
-		ft_free(&data);
+		free_all(data);
 		pthread_mutex_destroy(&data->print_mutex);
 		pthread_mutex_destroy(&data->meal_time_mutex);
 		return (1);
@@ -63,7 +63,7 @@ static int	init_forks_mutex(t_data *data)
 		if (pthread_mutex_init(&data->forks[i], NULL) != 0)
 		{
 			printf("forks mutex init failed\n");
-			ft_free(&data);
+			free_all(data);
 			pthread_mutex_destroy(&data->print_mutex);
 			pthread_mutex_destroy(&data->meal_time_mutex);
 			pthread_mutex_destroy(&data->stop_mutex);
