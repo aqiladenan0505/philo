@@ -6,26 +6,12 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:04:38 by aadenan           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2024/06/20 16:13:59 by aadenan          ###   ########.fr       */
-/*   Updated: 2024/06/20 11:38:01 by aadenan          ###   ########.fr       */
-=======
-/*   Updated: 2024/06/27 17:36:02 by aadenan          ###   ########.fr       */
->>>>>>> data_init
+/*   Updated: 2024/07/01 14:51:41 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-<<<<<<< HEAD
-// This function scans for non-number
-static int	ft_isnum(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-=======
 // Fix ft_atoi
 static int	ft_atoi(char *str)
 {
@@ -41,14 +27,14 @@ static int	ft_atoi(char *str)
 	}
 	return (nbr);
 }
+
 // This function scans for non-number
 static int	ft_isnum(char *str)
 {
 	int	i;
 
 	i = 0;
-	while(str[i] != '\0')
->>>>>>> data_init
+	while (str[i] != '\0')
 	{
 		if (!(str[i] >= 48 && str[i] <= 57))
 		{
@@ -63,11 +49,7 @@ static int	ft_isnum(char *str)
 // This function ensure input is not beyond int max
 static int	ft_intmax(char *str)
 {
-<<<<<<< HEAD
 	int		i;
-=======
-	int	i;
->>>>>>> data_init
 	long	nbr;
 
 	i = 0;
@@ -92,10 +74,7 @@ static int	ft_intmax(char *str)
 	}
 	return (0);
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> data_init
 // This function validate all the numbers in argv
 static int	check_valid(char **argv)
 {
@@ -109,8 +88,6 @@ static int	check_valid(char **argv)
 			printf("Index %d is invalid.\n", i);
 			return (1);
 		}
-<<<<<<< HEAD
-=======
 		printf("Checking input %d\n", i);
 		if (ft_isnum(argv[i]) == 1 || ft_intmax(argv[i]) == 1)
 		{
@@ -118,30 +95,11 @@ static int	check_valid(char **argv)
 			return (1);
 		}
 		printf("Input %d is valid.\n", i);
->>>>>>> data_init
 		i++;
 	}
 	return (0);
 }
 
-<<<<<<< HEAD
-static int	ft_atoi(char *str)
-{
-	int	nbr;
-	int	i;
-
-	i = 0;
-	nbr = 0;
-	while (str[i] != '\0')
-	{
-		nbr = (nbr * 10) + (str[i] - '0');
-		i++;
-	}
-	return (nbr);
-}
-
-=======
->>>>>>> data_init
 // This function parse input
 int	parse_input(t_data *data, char **argv)
 {
