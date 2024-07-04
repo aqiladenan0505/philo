@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 12:12:14 by aadenan           #+#    #+#             */
-/*   Updated: 2024/07/01 15:12:34 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/07/04 10:53:38 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(int argc, char **argv)
 		if (data_init(&data) == 1)
 			return (1);
 		printf(GREEN "---------- data_init done ----------\n" RESET);
-		// execute_dinner(&data;
+		execute_dinner(&data);
 		free_all(&data);
 	}
 	else

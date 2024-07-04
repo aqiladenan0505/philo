@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:04:38 by aadenan           #+#    #+#             */
-/*   Updated: 2024/07/01 14:51:41 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/07/04 15:37:49 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,5 +113,6 @@ int	parse_input(t_data *data, char **argv)
 		data->meals_nbr = ft_atoi(argv[5]);
 	else
 		data->meals_nbr = -1;
+	data->initial_time = get_current_time();
 	return (0);
 }

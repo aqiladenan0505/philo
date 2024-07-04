@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 18:46:17 by aadenan           #+#    #+#             */
-/*   Updated: 2024/07/01 15:05:31 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/07/04 16:07:55 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,9 @@ void	create_philo(t_data *data)
 		data->philo_data[i].meal_time_mutex = &data->meal_time_mutex;
 		data->philo_data[i].stop_flag = data->stop_flag;
 		data->philo_data[i].stop_mutex = &data->stop_mutex;
+		data->philo_data[i].data = data;
 		// pthread_create(&data->philo[i], NULL, ft_simulation, &data->philo_data[i]);
+		printf("stop_flag: %d\n", data->stop_flag);
 		printf("philo id: %d\n", data->philo_data[i].id);
 		printf("left_fork: %d\n", data->philo_data[i].left_fork);
 		printf("right fork: %d\n", data->philo_data[i].right_fork);
