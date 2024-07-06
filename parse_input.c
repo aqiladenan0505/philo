@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:04:38 by aadenan           #+#    #+#             */
-/*   Updated: 2024/07/04 15:37:49 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/07/06 14:59:02 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,13 +88,13 @@ static int	check_valid(char **argv)
 			printf("Index %d is invalid.\n", i);
 			return (1);
 		}
-		printf("Checking input %d\n", i);
+		//printf("Checking input %d\n", i);
 		if (ft_isnum(argv[i]) == 1 || ft_intmax(argv[i]) == 1)
 		{
 			printf("Input %d is invalid.\n", i);
 			return (1);
 		}
-		printf("Input %d is valid.\n", i);
+		//printf("Input %d is valid.\n", i);
 		i++;
 	}
 	return (0);
