@@ -6,7 +6,7 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 18:42:41 by aadenan           #+#    #+#             */
-/*   Updated: 2024/07/01 15:16:50 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/07/08 18:35:14 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@ static int	init_print_mutex(t_data *data)
 {
 	if (pthread_mutex_init(&data->print_mutex, NULL) != 0)
 	{
-		printf("print_mutex init failed\n");
 		free_all(data);
 		return (1);
 	}
-	printf("print_mutex init\n");
 	return (0);
 }
 
@@ -28,12 +26,10 @@ static int	init_meal_time_mutex(t_data *data)
 {
 	if (pthread_mutex_init(&data->meal_time_mutex, NULL) != 0)
 	{
-		printf("meal_time_mutex init failed\n");
 		free_all(data);
 		pthread_mutex_destroy(&data->print_mutex);
 		return (1);
 	}
-	printf("meal_time_mutex init\n");
 	return (0);
 }
 
@@ -41,13 +37,11 @@ static int	init_stop_mutex(t_data *data)
 {
 	if (pthread_mutex_init(&data->stop_mutex, NULL) != 0)
 	{
-		printf("stop_mutex init failed\n");
 		free_all(data);
 		pthread_mutex_destroy(&data->print_mutex);
 		pthread_mutex_destroy(&data->meal_time_mutex);
 		return (1);
 	}
-	printf("stop_mutex init\n");
 	return (0);
 }
 
@@ -62,7 +56,6 @@ static int	init_forks_mutex(t_data *data)
 	{
 		if (pthread_mutex_init(&data->forks[i], NULL) != 0)
 		{
-			printf("forks mutex init failed\n");
 			free_all(data);
 			pthread_mutex_destroy(&data->print_mutex);
 			pthread_mutex_destroy(&data->meal_time_mutex);
@@ -76,13 +69,11 @@ static int	init_forks_mutex(t_data *data)
 		}
 		i++;
 	}
-	printf("All forks init\n");
 	return (0);
 }
 
 int	create_lock(t_data *data)
 {
-	printf(YELLOW "---- create_lock init ----\n" RESET);
 	if (init_print_mutex(data) != 0)
 		return (1);
 	if (init_meal_time_mutex(data) != 0)

@@ -6,13 +6,12 @@
 /*   By: aadenan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:04:38 by aadenan           #+#    #+#             */
-/*   Updated: 2024/07/06 14:59:02 by aadenan          ###   ########.fr       */
+/*   Updated: 2024/07/09 17:01:53 by aadenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-// Fix ft_atoi
 static int	ft_atoi(char *str)
 {
 	int	i;
@@ -28,7 +27,6 @@ static int	ft_atoi(char *str)
 	return (nbr);
 }
 
-// This function scans for non-number
 static int	ft_isnum(char *str)
 {
 	int	i;
@@ -46,7 +44,6 @@ static int	ft_isnum(char *str)
 	return (0);
 }
 
-// This function ensure input is not beyond int max
 static int	ft_intmax(char *str)
 {
 	int		i;
@@ -75,7 +72,6 @@ static int	ft_intmax(char *str)
 	return (0);
 }
 
-// This function validate all the numbers in argv
 static int	check_valid(char **argv)
 {
 	int	i;
@@ -88,19 +84,16 @@ static int	check_valid(char **argv)
 			printf("Index %d is invalid.\n", i);
 			return (1);
 		}
-		//printf("Checking input %d\n", i);
 		if (ft_isnum(argv[i]) == 1 || ft_intmax(argv[i]) == 1)
 		{
 			printf("Input %d is invalid.\n", i);
 			return (1);
 		}
-		//printf("Input %d is valid.\n", i);
 		i++;
 	}
 	return (0);
 }
 
-// This function parse input
 int	parse_input(t_data *data, char **argv)
 {
 	if (check_valid(argv) == 1)
